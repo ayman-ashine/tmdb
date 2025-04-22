@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f0f0f0;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --foreground-low: rgb(127.5, 127.5, 127.5);
+  --surface: #ffffff;
+  --primary: oklch(0.92 0.19 114.08);
+  --danger: theme(--color-red-300);
+  --warning: theme(--color-yellow-300);
+  --success: theme(--color-green-300);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --foreground-low: rgb(127.5, 127.5, 127.5);
+    --surface: #2a2a2a;
+    --primary: oklch(0.92 0.19 114.08);
+    --danger: theme(--color-red-300);
+    --warning: theme(--color-yellow-300);
+    --success: theme(--color-green-300);
   }
+}
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-foreground-low: var(--foreground-low);
+  --color-surface: var(--surface);
+  --color-primary: var(--primary);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  /* --color-avocado-200: oklch(0.98 0.04 113.22);
+  --color-avocado-300: oklch(0.94 0.11 115.03);
+  --color-avocado-400: oklch(0.92 0.19 114.08);
+  --color-avocado-500: oklch(0.84 0.18 117.33);
+  --color-avocado-600: oklch(0.53 0.12 118.34); */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .btn {
+    @apply flex justify-center items-center gap-2 bg-surface disabled:opacity-50 shadow-sm px-4 py-2 border hover:border-foreground border-transparent rounded-md w-fit font-bold capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    @apply flex justify-center items-center gap-2 bg-primary hover:opacity-70 disabled:opacity-50 shadow-sm px-4 py-2 rounded-md w-fit font-bold text-background capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+  }
+
+  .btn-danger {
+    @apply flex justify-center items-center gap-2 bg-danger hover:opacity-70 disabled:opacity-50 shadow-sm px-4 py-2 rounded-md w-fit font-bold text-background capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+  }
+
+  .btn-warning {
+    @apply flex justify-center items-center gap-2 bg-warning hover:opacity-70 disabled:opacity-50 shadow-sm px-4 py-2 rounded-md w-fit font-bold text-background capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+  }
+
+  .btn-success {
+    @apply flex justify-center items-center gap-2 bg-success hover:opacity-70 disabled:opacity-50 shadow-sm px-4 py-2 rounded-md w-fit font-bold text-background capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+  }
+
+  .btn-icon {
+    @apply flex justify-center items-center bg-surface disabled:opacity-50 shadow-sm p-2 border hover:border-foreground border-transparent rounded-full w-fit aspect-square active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+  }
+
+  .btn-icon-primary {
+    @apply flex justify-center items-center bg-primary hover:opacity-70 disabled:opacity-50 shadow-sm p-2 rounded-full w-fit aspect-square [&_svg]:text-background active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+  }
+
+  .btn-icon-danger {
+    @apply flex justify-center items-center bg-danger hover:opacity-70 disabled:opacity-50 shadow-sm p-2 rounded-full w-fit aspect-square [&_svg]:text-background active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+  }
+
+  .btn-icon-warning {
+    @apply flex justify-center items-center bg-warning hover:opacity-70 disabled:opacity-50 shadow-sm p-2 rounded-full w-fit aspect-square [&_svg]:text-background active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+  }
+
+  .btn-icon-success {
+    @apply flex justify-center items-center bg-success hover:opacity-70 disabled:opacity-50 shadow-sm p-2 rounded-full w-fit aspect-square [&_svg]:text-background active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+  }
+
+  .input {
+    @apply px-4 py-2 border placeholder:text-foreground-low border-foreground-low rounded-md focus:border-foreground w-full font-bold duration-200 outline-none
+  }
+
+}
+
+@layer utilities {
+  .see {
+    @apply border border-danger border-dotted;
+  }
 }

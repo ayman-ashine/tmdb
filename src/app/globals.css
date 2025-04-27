@@ -50,23 +50,23 @@ body {
 
 @layer components {
   .btn {
-    @apply flex justify-center items-center gap-2 bg-surface disabled:opacity-50 shadow-sm px-4 py-2 border hover:border-foreground border-transparent rounded-md w-fit font-bold capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+    @apply flex justify-center items-center gap-2 bg-surface disabled:opacity-50 shadow-sm px-4 py-2 border hover:border-foreground border-transparent rounded-md w-fit capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
   }
 
   .btn-primary {
-    @apply flex justify-center items-center gap-2 bg-primary hover:opacity-70 disabled:opacity-50 shadow-sm px-4 py-2 rounded-md w-fit font-bold text-background capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+    @apply flex justify-center items-center gap-2 bg-primary hover:opacity-70 disabled:opacity-50 shadow-sm px-4 py-2 rounded-md w-fit text-background capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
   }
 
   .btn-danger {
-    @apply flex justify-center items-center gap-2 bg-danger hover:opacity-70 disabled:opacity-50 shadow-sm px-4 py-2 rounded-md w-fit font-bold text-background capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+    @apply flex justify-center items-center gap-2 bg-danger hover:opacity-70 disabled:opacity-50 shadow-sm px-4 py-2 rounded-md w-fit text-background capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
   }
 
   .btn-warning {
-    @apply flex justify-center items-center gap-2 bg-warning hover:opacity-70 disabled:opacity-50 shadow-sm px-4 py-2 rounded-md w-fit font-bold text-background capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+    @apply flex justify-center items-center gap-2 bg-warning hover:opacity-70 disabled:opacity-50 shadow-sm px-4 py-2 rounded-md w-fit text-background capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
   }
 
   .btn-success {
-    @apply flex justify-center items-center gap-2 bg-success hover:opacity-70 disabled:opacity-50 shadow-sm px-4 py-2 rounded-md w-fit font-bold text-background capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
+    @apply flex justify-center items-center gap-2 bg-success hover:opacity-70 disabled:opacity-50 shadow-sm px-4 py-2 rounded-md w-fit text-background capitalize active:scale-95 duration-200 cursor-pointer disabled:pointer-events-none;
   }
 
   .btn-icon {
@@ -90,7 +90,7 @@ body {
   }
 
   .input {
-    @apply px-4 py-2 border placeholder:text-foreground-low border-foreground-low rounded-md focus:border-foreground w-full font-bold duration-200 outline-none
+    @apply px-4 py-2 border bg-surface placeholder:text-foreground placeholder:opacity-50 border-transparent rounded-md focus:border-foreground w-full duration-200 outline-none
   }
 
 }

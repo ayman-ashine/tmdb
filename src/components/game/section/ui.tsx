@@ -1,6 +1,6 @@
 import { FileWarning } from "lucide-react";
 
-export function InitialCaseSummary() {
+export function UI() {
   return (
     <section className="flex gap-4 p-4 see">
       <button className="btn">
